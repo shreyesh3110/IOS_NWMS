@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chennagouni_SearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UGr-O2-tdq">
+                                <rect key="frame" x="20" y="89" width="353" height="34.333333333333343"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a keyword to search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qBd-Ve-FuZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="249" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE8-zU-gTG">
+                                        <rect key="frame" x="250" y="0.0" width="103" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system" title="Search"/>
+                                        <connections>
+                                            <action selector="searchBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLF-q4-hCR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MEq-6F-H8o">
+                                <rect key="frame" x="20" y="143.33333333333334" width="353" height="200.00000000000003"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="qsM-xe-U1D"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xjG-V0-d9K">
+                                <rect key="frame" x="15" y="457.66666666666674" width="363" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="GXI-IY-vUq"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FKa-hX-db8">
+                                <rect key="frame" x="15" y="373.33333333333331" width="363" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kks-fD-XmK">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.33333333333333" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="arrowshape.turn.up.backward" catalog="system" title=" Prev "/>
+                                        <connections>
+                                            <action selector="prevBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x55-f1-c5Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqE-90-GeW">
+                                        <rect key="frame" x="124.33333333333334" y="0.0" width="114.33333333333334" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="arrow.trianglehead.clockwise" catalog="system" title=" Reset "/>
+                                        <connections>
+                                            <action selector="resetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3AY-Yc-DNE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIR-81-VIO">
+                                        <rect key="frame" x="248.66666666666671" y="0.0" width="114.33333333333334" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="arrowshape.turn.up.right" catalog="system" title=" Next"/>
+                                        <connections>
+                                            <action selector="nextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22d-ce-Awz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FKa-hX-db8" secondAttribute="trailing" constant="15" id="DG5-Cf-jvX"/>
+                            <constraint firstItem="xjG-V0-d9K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="GqW-hT-ziA"/>
+                            <constraint firstItem="FKa-hX-db8" firstAttribute="top" secondItem="MEq-6F-H8o" secondAttribute="bottom" constant="30" id="KsZ-Kq-wJN"/>
+                            <constraint firstItem="UGr-O2-tdq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Mow-mQ-jP9"/>
+                            <constraint firstItem="FKa-hX-db8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="OjE-Pd-FN1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGr-O2-tdq" secondAttribute="trailing" constant="20" id="QHx-WD-2OU"/>
+                            <constraint firstItem="MEq-6F-H8o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rcx-mc-i4F"/>
+                            <constraint firstItem="xjG-V0-d9K" firstAttribute="top" secondItem="FKa-hX-db8" secondAttribute="bottom" constant="50" id="WXw-zs-UJf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MEq-6F-H8o" secondAttribute="trailing" constant="20" id="Wfg-Bj-5Gj"/>
+                            <constraint firstItem="UGr-O2-tdq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fp7-BR-GgQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xjG-V0-d9K" secondAttribute="trailing" constant="15" id="ody-mL-uis"/>
+                            <constraint firstItem="MEq-6F-H8o" firstAttribute="top" secondItem="UGr-O2-tdq" secondAttribute="bottom" constant="20" id="sc7-pT-AqG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ResetBtn" destination="tqE-90-GeW" id="BFy-KF-KR2"/>
+                        <outlet property="ShowNextImageBtn" destination="bIR-81-VIO" id="73r-Ar-Ivp"/>
+                        <outlet property="ShowPrevImageBtn" destination="kks-fD-XmK" id="wwR-qq-RHy"/>
+                        <outlet property="resultImage" destination="MEq-6F-H8o" id="vGT-PL-Wjh"/>
+                        <outlet property="searchButtonAction" destination="WE8-zU-gTG" id="7OW-pk-k1B"/>
+                        <outlet property="searchTextField" destination="qBd-Ve-FuZ" id="MNm-c5-qDa"/>
+                        <outlet property="topicInfoText" destination="xjG-V0-d9K" id="eV3-Ql-vNU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.trianglehead.clockwise" catalog="system" width="119" height="128"/>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
